@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\NomeSobrenome\\Downloads\\Skylos-API-master\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj": {}
+    "C:\\Users\\Vitor\\Desktop\\ctc\\Projetos\\ProjetoSkylos-API\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\NomeSobrenome\\Downloads\\Skylos-API-master\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj": {
+    "C:\\Users\\Vitor\\Desktop\\ctc\\Projetos\\ProjetoSkylos-API\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\NomeSobrenome\\Downloads\\Skylos-API-master\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj",
+        "projectUniqueName": "C:\\Users\\Vitor\\Desktop\\ctc\\Projetos\\ProjetoSkylos-API\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj",
         "projectName": "ProjetoSkylos_API",
-        "projectPath": "C:\\Users\\NomeSobrenome\\Downloads\\Skylos-API-master\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj",
-        "packagesPath": "C:\\Users\\NomeSobrenome\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NomeSobrenome\\Downloads\\Skylos-API-master\\ProjetoSkylos_API\\obj\\",
+        "projectPath": "C:\\Users\\Vitor\\Desktop\\ctc\\Projetos\\ProjetoSkylos-API\\ProjetoSkylos_API\\ProjetoSkylos_API.csproj",
+        "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vitor\\Desktop\\ctc\\Projetos\\ProjetoSkylos-API\\ProjetoSkylos_API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\NomeSobrenome\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,7 +40,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.3, )"
+              "version": "[3.1.4, )"
             }
           },
           "imports": [
@@ -64,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
