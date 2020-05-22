@@ -100,5 +100,24 @@ namespace ProjetoSkylos_API.Data
             return await consultaAnimais.FirstOrDefaultAsync();
         }
 
+        public async Task<Avaliacao[]> GetAllAvaliacoesAsync()
+        {
+            //throw new System.NotImplementedException();
+            IQueryable<Avaliacao> consultaAvaliacoes = this.Context.Avaliacao;
+            consultaAvaliacoes = consultaAvaliacoes.OrderBy(a => a.Id);
+
+            return await consultaAvaliacoes.ToArrayAsync();
+        }
+
+        public async Task<Avaliacao> GetAllAvaliacoesAsyncById(int Id)
+        {
+            IQueryable<Avaliacao> consultaAvaliacoes = this.Context.Avaliacao;
+            consultaAvaliacoes = consultaAvaliacoes.OrderBy(a => a.Id)
+            .Where(Avaliacao => Avaliacao.Id == Id);
+
+
+            return await consultaAvaliacoes.FirstOrDefaultAsync();
+        }
+
     }
 }

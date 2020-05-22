@@ -20,5 +20,8 @@ namespace ProjetoSkylos_API.Data
 
         Task<Animal[]> GetAllAnimaisAsync();
         Task<Animal> GetAllAnimaisAsyncById(int id);
+
+        Task<Avaliacao[]> GetAllAvaliacoesAsync();
+        Task<Avaliacao> GetAllAvaliacoesAsyncById(int id);
     }
 }

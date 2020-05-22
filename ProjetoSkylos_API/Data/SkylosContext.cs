@@ -16,5 +16,7 @@ namespace ProjetoSkylos_API.Data
 
     public DbSet<Animal> Animal{get; set;}
 
+    public DbSet<Avaliacao> Avaliacao{get; set;}
+
     }
 }
