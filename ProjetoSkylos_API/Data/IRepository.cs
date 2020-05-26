@@ -23,5 +23,8 @@ namespace ProjetoSkylos_API.Data
 
         Task<Avaliacao[]> GetAllAvaliacoesAsync();
         Task<Avaliacao> GetAllAvaliacoesAsyncById(int id);
+
+        Task<Servico[]> GetAllServicosAsync();
+        Task<Servico> GetAllServicosAsyncById(int id);
     }
 }

@@ -8,10 +8,10 @@ namespace ProjetoSkylos_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AvaliacaoController : Controller
+    public class ServicoController : Controller
     {
         public IRepository Repo { get; }
-        public AvaliacaoController(IRepository repo)
+        public ServicoController(IRepository repo)
         {
             this.Repo = repo;
             //construtor
@@ -21,7 +21,7 @@ namespace ProjetoSkylos_API.Controllers
         {
             try
             {
-                var result = await this.Repo.GetAllAvaliacoesAsync();
+                var result = await this.Repo.GetAllServicosAsync();
                 return Ok(result);
             }
             catch(Exception ex)
@@ -36,7 +36,7 @@ namespace ProjetoSkylos_API.Controllers
         {
             try
             {
-                var result = await this.Repo.GetAllAvaliacoesAsyncById(Id);
+                var result = await this.Repo.GetAllServicosAsyncById(Id);
                 return Ok(result);
             }
             catch
@@ -45,7 +45,7 @@ namespace ProjetoSkylos_API.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> post(Avaliacao model)
+        public async Task<IActionResult> post(Servico model)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace ProjetoSkylos_API.Controllers
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
-                    return Created($"/api/avaliacao/{model.Id}", model);
+                    return Created($"/api/servico/{model.Id}", model);
                 }
             }
             catch
@@ -64,21 +64,21 @@ namespace ProjetoSkylos_API.Controllers
             return BadRequest();
         }
         [HttpPut("{Id}")]
-        public async Task<IActionResult> put(int Id, Avaliacao model)
+        public async Task<IActionResult> put(int Id, Servico model)
         {
             try
             {
                 //verifica se existe aluno a ser alterado
-                var avaliacao = await this.Repo.GetAllAvaliacoesAsyncById(Id);
-                if (avaliacao == null) return NotFound(); //método do EF
+                var servico = await this.Repo.GetAllServicosAsyncById(Id);
+                if (servico == null) return NotFound(); //método do EF
                 this.Repo.Update(model);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {
                     //return Ok();
                     //pegar o aluno novamente, agora alterado para devolver pela rota abaixo
-                    avaliacao = await this.Repo.GetAllAvaliacoesAsyncById(Id);
-                    return Created($"/api/avaliacao/{model.Id}", avaliacao);
+                    servico = await this.Repo.GetAllServicosAsyncById(Id);
+                    return Created($"/api/servico/{model.Id}", servico);
                 }
             }
             catch
@@ -94,9 +94,9 @@ namespace ProjetoSkylos_API.Controllers
             try
             {
                 //verifica se existe aluno a ser excluído
-                var avaliacao = await this.Repo.GetAllAvaliacoesAsyncById(Id);
-                if (avaliacao == null) return NotFound(); //método do EF
-                this.Repo.Delete(avaliacao);
+                var servico = await this.Repo.GetAllServicosAsyncById(Id);
+                if (servico == null) return NotFound(); //método do EF
+                this.Repo.Delete(servico);
                 //
                 if (await this.Repo.SaveChangesAsync())
                 {

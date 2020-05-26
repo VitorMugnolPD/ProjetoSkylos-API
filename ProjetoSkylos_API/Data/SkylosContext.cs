@@ -18,5 +18,7 @@ namespace ProjetoSkylos_API.Data
 
     public DbSet<Avaliacao> Avaliacao{get; set;}
 
+    public DbSet<Servico> Servico {get; set;}
+
     }
 }

@@ -78,7 +78,7 @@ namespace ProjetoSkylos_API.Controllers
                     //return Ok();
                     //pegar o aluno novamente, agora alterado para devolver pela rota abaixo
                     animal = await this.Repo.GetAllAnimaisAsyncById(Id);
-                    return Created($"/api/cliente/{model.Id}", animal);
+                    return Created($"/api/animal/{model.Id}", animal);
                 }
             }
             catch

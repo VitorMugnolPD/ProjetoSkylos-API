@@ -119,5 +119,24 @@ namespace ProjetoSkylos_API.Data
             return await consultaAvaliacoes.FirstOrDefaultAsync();
         }
 
+        public async Task<Servico[]> GetAllServicosAsync()
+        {
+            //throw new System.NotImplementedException();
+            IQueryable<Servico> consultaServicos = this.Context.Servico;
+            consultaServicos = consultaServicos.OrderBy(a => a.Id);
+
+            return await consultaServicos.ToArrayAsync();
+        }
+
+        public async Task<Servico> GetAllServicosAsyncById(int Id)
+        {
+            IQueryable<Servico> consultaServicos = this.Context.Servico;
+            consultaServicos = consultaServicos.OrderBy(a => a.Id)
+            .Where(Servico => Servico.Id == Id);
+
+
+            return await consultaServicos.FirstOrDefaultAsync();
+        }
+
     }
 }
