@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProjetoSkylos_API.Data;
 using ProjetoSkylos_API.Models;
 using System;
+
 namespace ProjetoSkylos_API.Controllers
 {
     [Route("api/[controller]")]
