@@ -61,7 +61,7 @@ namespace ProjetoSkylos_API.Controllers
             catch
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                "oof.");
+                "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
         }
@@ -111,6 +111,20 @@ namespace ProjetoSkylos_API.Controllers
                  "Falha no acesso ao banco de dados.");
             }
             return BadRequest();
+        }
+        [HttpGet("{Email}/{Senha}")]
+        public async Task<IActionResult> Get(string Email, string Senha)
+        {
+            try
+            {
+                var result = await this.Repo.GetClienteByEmailAndSenha(Email,Senha);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                "Falha no acesso ao banco de dados.");
+            }
         }
     }
 }

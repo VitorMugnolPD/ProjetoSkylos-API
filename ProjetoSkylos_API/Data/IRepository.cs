@@ -12,6 +12,7 @@ namespace ProjetoSkylos_API.Data
 
         Task<Cliente[]> GetAllClientesAsync();
         Task<Cliente> GetAllClientesAsyncById(int Id);
+        Task<Cliente> GetClienteByEmailAndSenha(string Email, string Senha);
 
         Task<Cuidador[]> GetAllCuidadoresAsync();
         Task<Cuidador> GetAllCuidadoresAsyncById(int Id);
