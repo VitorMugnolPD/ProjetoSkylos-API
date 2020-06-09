@@ -61,6 +61,16 @@ namespace ProjetoSkylos_API.Data
             return await consultaClientes.FirstOrDefaultAsync();
         }
 
+        public async Task<Cuidador> GetCuidadorByEmailAndSenha(string Email, string Senha)
+        {
+            IQueryable<Cuidador> consultaCuidadores = this.Context.Cuidador;
+
+            consultaCuidadores = consultaCuidadores.OrderBy(a => a.Id)
+            .Where(cuidador => (cuidador.Email == Email || cuidador.Senha == Senha));
+
+            return await consultaCuidadores.FirstOrDefaultAsync();
+        }
+
         public async Task<Cuidador[]> GetAllCuidadoresAsync()
         {
             //throw new System.NotImplementedException();

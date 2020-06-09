@@ -127,5 +127,20 @@ namespace ProjetoSkylos_API.Controllers
             }
             return BadRequest();
         }
+
+        [HttpGet("{Email}/{Senha}")]
+        public async Task<IActionResult> Get(string Email, string Senha)
+        {
+            try
+            {
+                var result = await this.Repo.GetCuidadorByEmailAndSenha(Email,Senha);
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,
+                "Falha no acesso ao banco de dados.");
+            }
+        }
     }
 }

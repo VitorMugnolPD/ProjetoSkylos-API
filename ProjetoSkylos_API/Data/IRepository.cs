@@ -16,6 +16,7 @@ namespace ProjetoSkylos_API.Data
 
         Task<Cuidador[]> GetAllCuidadoresAsync();
         Task<Cuidador> GetAllCuidadoresAsyncById(int Id);
+        Task<Cuidador> GetCuidadorByEmailAndSenha(string Email, string Senha);
 
         Task<Cuidador[]> GetCuidadoresByFilter(float Latitude,float Longitude,string AfinidadeComBichos);
 
