@@ -56,7 +56,7 @@ namespace ProjetoSkylos_API.Data
             IQueryable<Cliente> consultaClientes = this.Context.Cliente;
 
             consultaClientes = consultaClientes.OrderBy(a => a.Id)
-            .Where(cliente => (cliente.Email == Email || cliente.Senha == Senha));
+            .Where(cliente => (cliente.Email == Email && cliente.Senha == Senha));
 
             return await consultaClientes.FirstOrDefaultAsync();
         }
@@ -66,7 +66,7 @@ namespace ProjetoSkylos_API.Data
             IQueryable<Cuidador> consultaCuidadores = this.Context.Cuidador;
 
             consultaCuidadores = consultaCuidadores.OrderBy(a => a.Id)
-            .Where(cuidador => (cuidador.Email == Email || cuidador.Senha == Senha));
+            .Where(cuidador => (cuidador.Email == Email && cuidador.Senha == Senha));
 
             return await consultaCuidadores.FirstOrDefaultAsync();
         }

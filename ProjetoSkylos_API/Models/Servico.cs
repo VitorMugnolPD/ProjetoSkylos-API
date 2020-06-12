@@ -7,6 +7,7 @@ namespace ProjetoSkylos_API.Models
         public int Id { get; set; }
         public int IdCuidador { get; set;}
         public int IdCliente { get; set; }
+        public int IdAnimal { get; set; }
         public DateTime DataInicio { get; set; }
         public int Periodo { get; set; }
         public DateTime DataFim { get; set; }
